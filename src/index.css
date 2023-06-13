@@ -1,0 +1,20 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  --sidebar-bg-color: hsl(265, 100%, 47%); 
+  --accent-color: hsl(265, 100%, 30%);
+  --on-hover-bg-color: hsl(265, 100%, 40%);
+  --main-bg-color: whitesmoke; 
+  font-family: 'Lato', sans-serif;
+}
+
+body.dark {
+  --sidebar-bg-color: #1f1f1f;
+  --accent-color: hsl(267, 95%, 76%);
+  --on-hover-bg-color: hsl(267, 95%, 83%);
+  --main-bg-color: #121212;
+}
