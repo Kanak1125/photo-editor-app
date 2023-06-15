@@ -95,6 +95,10 @@ function App() {
   const [sidebarMenu, setSidebarMenu] = useState(menuItems);
   const [currentOption, setCurrentOption] = useState(sidebarMenu[0]);
 
+  function resetSidebarMenu() {
+    setSidebarMenu(menuItems);
+  }
+
   function handleSlider(e) {
     const currentValue = e.target.value;
     // setSlider(e.target.value);
@@ -139,6 +143,7 @@ function App() {
         sidebarMenu={sidebarMenu}
         currentOption= {currentOption}
         handleSlider={(event) => handleSlider(event)}
+        resetSidebarMenu={resetSidebarMenu}
       />
       <Sidebar
         menuItems={sidebarMenu}

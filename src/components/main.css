@@ -5,17 +5,116 @@
     align-items: center;
     padding: 40px 0;
     row-gap: 2rem;
-    background-color: var(--main-bg-color);
+    position: relative;
+}
+
+.download-link {
+    position: absolute;
+    inset: auto 20px 20px auto;
+    color: whitesmoke;
+    font-size: 24px;
+    width: 36px;
+    height: 36px;
+    border: 2px solid whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: color 300ms ease-out;
+}
+
+.download-link::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    transform: scaleY(0);
+    transform-origin: top left;
+    transform: translate(-100%, -100%);
+    z-index: -1;
+    transition: transform 300ms linear;
+}
+
+.download-link:hover::before {
+    transform: scaleY(1);
+    transform: translate(0, 0);
+
+}
+
+.download-link:hover {
+    color: #1f1f1f;
+}
+
+.img-container {
+    /* border: 1px solid white; */
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* background-color: white; */
+    z-index: 11;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container:hover .overlay{
+    opacity: 1;
+}
+
+.upload-btn {
+    width: 120px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid whitesmoke;
+    font-size: 20px;
+    font-weight: 700;
+    color: whitesmoke;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 200ms linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-btn:hover {
+    background-color: whitesmoke;
+    border-color: whitesmoke;
+    color: #1f1f1f;
+}
+
+#upload_file {
+    display: none;
 }
 
 .main img {
-    width: 80%;
-    max-width: 400px;
+    width: auto;
+    max-width: 999px;
     height: auto;
+    max-height: 525px;
 }
 
 .slider {
     width: 80%;
     min-width: 200px;
     max-width: 400px;
+}
+
+@media (max-width: 800px) {
+    .main img {
+        max-height: none;
+        width: 85%;
+        height: auto;
+    }
 }

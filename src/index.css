@@ -10,6 +10,7 @@ body {
   --on-hover-bg-color: hsl(265, 100%, 40%);
   --main-bg-color: whitesmoke; 
   font-family: 'Lato', sans-serif;
+  background-color: var(--main-bg-color);
 }
 
 body.dark {
