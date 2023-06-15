@@ -34,3 +34,16 @@
 .sidebar ul li:hover {
     background-color: var(--on-hover-bg-color);
 }
+
+.toggle-dark-mode-btn {
+    width: 80%;
+    border: 2px solid var(--btn--color);
+    color: var(--btn--color);
+    margin: 40px auto;
+  }
+  
+  .toggle-dark-mode-btn:hover {
+    background-color: var(--btn--color) ;
+    border-color: var(--btn--color) ;
+    color: var(--btn-txt-color);
+  }

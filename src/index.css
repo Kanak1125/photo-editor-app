@@ -8,6 +8,8 @@ body {
   --sidebar-bg-color: hsl(265, 100%, 47%); 
   --accent-color: hsl(265, 100%, 30%);
   --on-hover-bg-color: hsl(265, 100%, 40%);
+  --btn--color: #1f1f1f;
+  --btn-txt-color: whitesmoke;
   --main-bg-color: whitesmoke; 
   font-family: 'Lato', sans-serif;
   background-color: var(--main-bg-color);
@@ -18,4 +20,6 @@ body.dark {
   --accent-color: hsl(267, 95%, 76%);
   --on-hover-bg-color: hsl(267, 95%, 83%);
   --main-bg-color: #121212;
+  --btn--color: whitesmoke;
+  --btn-txt-color: #1f1f1f;
 }

@@ -11,11 +11,11 @@
 .download-link {
     position: absolute;
     inset: auto 20px 20px auto;
-    color: whitesmoke;
+    color: var(--btn--color);
     font-size: 24px;
     width: 36px;
     height: 36px;
-    border: 2px solid whitesmoke;
+    border: 2px solid var(--btn--color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,7 +31,7 @@
     width: 200%;
     height: 200%;
     border-radius: 50%;
-    background-color: whitesmoke;
+    background-color: var(--btn--color);
     transform: scaleY(0);
     transform-origin: top left;
     transform: translate(-100%, -100%);
@@ -42,15 +42,13 @@
 .download-link:hover::before {
     transform: scaleY(1);
     transform: translate(0, 0);
-
 }
 
 .download-link:hover {
-    color: #1f1f1f;
+    color: var(--btn-txt-color);
 }
 
 .img-container {
-    /* border: 1px solid white; */
     position: relative;
 }
 
@@ -59,7 +57,6 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
-    /* background-color: white; */
     z-index: 11;
     opacity: 0;
     transition: opacity 300ms ease-in-out;
@@ -73,19 +70,8 @@
 }
 
 .upload-btn {
-    width: 120px;
-    height: 45px;
-    background: transparent;
     border: 2px solid whitesmoke;
-    font-size: 20px;
-    font-weight: 700;
     color: whitesmoke;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 200ms linear;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .upload-btn:hover {

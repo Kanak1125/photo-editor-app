@@ -1,7 +1,7 @@
 import React from 'react';
 import './sidebar.css';
 
-const Sidebar = ({menuItems, handleCurrentMenuItem}) => {
+const Sidebar = ({darkMode, menuItems, toggleDarkMode, handleCurrentMenuItem}) => {
   const menu = menuItems.map(item => 
     <li 
     key={item.id}
@@ -16,6 +16,10 @@ const Sidebar = ({menuItems, handleCurrentMenuItem}) => {
             {/* <li className='active'>Brightness</li> */}
             {menu}
         </ul>
+        <button 
+        className='btn toggle-dark-mode-btn' 
+        onClick={toggleDarkMode}
+        >{darkMode ? 'Light' : 'Dark'}</button>
     </div>
   )
 }

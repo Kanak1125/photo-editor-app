@@ -35,7 +35,7 @@ const Main = ({currentOption, sidebarMenu, handleSlider, resetSidebarMenu}) => {
 
   const canvasRef = useRef(null);
 
-  const downloadImg = (e) => {
+  const downloadImg = () => {
     const image = document.getElementById('image');
     const canvas = canvasRef.current;
     let imageUrl;
@@ -66,7 +66,7 @@ const Main = ({currentOption, sidebarMenu, handleSlider, resetSidebarMenu}) => {
       </a>}
       <div className="img-container">
         <div className="overlay">
-          <label htmlFor='upload_file' className='upload-btn'>
+          <label htmlFor='upload_file' className='btn upload-btn' title='Upload an image to be able to edit and download...'>
             Upload
           </label>
           <input 

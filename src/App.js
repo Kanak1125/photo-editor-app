@@ -5,6 +5,7 @@ import Sidebar from './components/Sidebar';
 import { nanoid } from 'nanoid';
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
   const menuItems = [
     {
       id: nanoid(),
@@ -109,6 +110,16 @@ function App() {
     console.log(e.target.value);
   }
 
+  const toggleDarkMode = () => {
+    setDarkMode(mode => !mode);
+    console.log(darkMode);
+  }
+
+  useEffect(() => {
+    const bodyClass = document.body.classList;
+    darkMode ? bodyClass.add('dark') : bodyClass.remove('dark');
+  }, [darkMode])
+
   useEffect(() => {
     const activeOption = sidebarMenu.find(menu => menu.isActive); // returns the TRUE item whose condition is met...
    
@@ -146,7 +157,9 @@ function App() {
         resetSidebarMenu={resetSidebarMenu}
       />
       <Sidebar
+        darkMode={darkMode}
         menuItems={sidebarMenu}
+        toggleDarkMode={toggleDarkMode}
         handleCurrentMenuItem={handleCurrentMenuItem}
       />
     </div>
