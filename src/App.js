@@ -136,7 +136,6 @@ function App() {
   
   function handleCurrentMenuItem(e) {
     const currentMenuText = e.target.textContent;
-    // getCurrentOption();
     setSidebarMenu(prevSideMenu => {
       return prevSideMenu.map(item => (
         {

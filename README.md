@@ -1,3 +1,9 @@
+# Upload your image, edit it and Download...
+
+## JS Topics covered...
+- Canvas API
+- useState(), useEffect() and useRef() hooks
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

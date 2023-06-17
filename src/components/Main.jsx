@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import './main.css';
-// import axios from 'axios';
 
 const Main = ({currentOption, sidebarMenu, handleSlider, resetSidebarMenu}) => {
   const [selectedImage, setSelectedImage] = useState("https://w0.peakpx.com/wallpaper/765/827/HD-wallpaper-spider-man-far-from-home.jpg");
@@ -12,14 +11,6 @@ const Main = ({currentOption, sidebarMenu, handleSlider, resetSidebarMenu}) => {
     'filter' : updatedStyleProps
   }
 
-  // const filteredImage = selectedImage && <img 
-  //   src={selectedImage} 
-  //   alt="" 
-  //   style={styles}
-  // />
-
-  // const [currentImage, setCurrentImage] = useState(filteredImage);
-
   const fileUploaded = useRef(false); // to avoid page rerendering while updating the fileUploaded constant...
 
   console.log(fileUploaded);
@@ -30,7 +21,6 @@ const Main = ({currentOption, sidebarMenu, handleSlider, resetSidebarMenu}) => {
       setSelectedImage(URL.createObjectURL(file));  // generates objectURL blob of the selected file with URL interface...
       resetSidebarMenu();
     }
-    // setCurrentImage(filteredImage);
   }
 
   const canvasRef = useRef(null);
